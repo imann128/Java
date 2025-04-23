@@ -1,0 +1,12 @@
+package flyable;
+
+public class Plane {
+    private Flyable Plane;   // Dependency injection
+
+public Plane() {
+Plane = new Flyable("Boeing 777", "White", true);
+Plane.displayDetails();
+    
+        }
+
+}
