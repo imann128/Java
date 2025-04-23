@@ -1,0 +1,18 @@
+package vehicle;
+
+public class CarEngine {
+    private int noOfEngine;
+    private int horsePower;
+    private int chasisNumber;
+    // Constructor
+public CarEngine(int noOfEngine,int horsePower,int chasisNumber){
+     this.noOfEngine = noOfEngine;
+     this.horsePower = horsePower;
+     this.chasisNumber = chasisNumber;
+}    
+    // Functiom
+public void startEngine () {
+    System.out.println("Engine has been started");
+}  
+
+}
