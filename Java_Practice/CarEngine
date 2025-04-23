@@ -1,6 +1,6 @@
 package vehicle;
 
-public class CarEngine {
+class CarEngine {
     private int noOfEngine;
     private int horsePower;
     private int chasisNumber;
@@ -16,3 +16,82 @@ public void startEngine () {
 }  
 
 }
+
+class Vehicle {
+     private String color;
+     private int model;
+     private double maxSpeed;
+
+public void setColor(String color){
+     this.color = color;
+}     
+    
+public void setModel(int model){
+     this.model = model;
+}     
+     
+public void setMaxSpeed(double maxSpeed){
+     this.maxSpeed = maxSpeed;
+} 
+
+public String getColor(){
+     return color;
+}     
+    
+public int getModel(){
+    return model;
+}     
+     
+public double getMaxSpeed(){
+    return maxSpeed;
+} 
+
+public void displayDetails() {
+        System.out.println("Color" + getColor() + "Model" + getModel() + "Maximum speed" + getMaxSpeed());
+}
+  
+    public static void main(String[] args) {
+       new Vehicle();
+        
+        
+    }
+    
+}
+
+
+ class HondaCar extends Vehicle {
+    // reference object
+    private CarEngine HondaEngine;
+    
+    
+  // Default Constructor  
+    public HondaCar() {
+        HondaEngine = new CarEngine(2, 600, 2314);
+        HondaEngine.startEngine();
+    }
+    
+    
+}
+ class SuzukiCar {
+    private CarEngine SuzukiEngine;
+    
+    // Dependency injection when variables can be accessed through a constructor
+public SuzukiCar() {
+    SuzukiEngine = new CarEngine(1, 500, 110);
+    SuzukiEngine.startEngine();
+    }
+}
+
+public class Tester {
+    
+    public static void main(String [] args) {
+        HondaCar HondaCity = new HondaCar();
+        HondaCity.setColor("Black");
+        HondaCity.setModel(2014);
+        HondaCity.setMaxSpeed(120.4);
+        HondaCity.displayDetails();
+    }
+            
+            
+}
+
