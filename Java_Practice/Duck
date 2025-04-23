@@ -1,0 +1,17 @@
+package flyable;
+
+public class Duck extends Flyable {
+   private String breed;
+   
+public Duck(String name, String color, boolean canFly, String breed) {
+    super(name, color, canFly);
+    this.breed =  breed;
+}
+public void displayDetails() {
+   System.out.println("The duck is: " + getName() + getColor() + getCanFly() + breed);
+}
+public static void main (String [] args) {
+     Duck duck1 = new Duck("Timmy \n", "Brown and Black\n", true, "\nturkish");
+     duck1.displayDetails();
+}
+}
