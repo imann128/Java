@@ -1,0 +1,15 @@
+Readme File:
+Remote Hospital management system:
+ Remote Hospital Management System program allows you to manage all the relevant hospital operations in one place.
+Introduction:
+This program allows effortless management of hospital operations like 
+•	Saving patient records
+•	Saving patient reports
+•	Allows doctors to make and manage appointments
+•	Saving doctor records
+•	View past consultation records         
+How it works:
+This program can be run on any IDE for example Eclipse, Intellij, Apache netbeans or VS Code. After downloading the file, you can open it on any IDE of choice. The program prompts you to choose your desired operation for example view patient information, view past consultation history etc. 
+Instructions:
+Use your own credentials to test email, sms and reminder services.
+
