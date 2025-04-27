@@ -1,0 +1,55 @@
+CREATE TABLE patients (
+  id VARCHAR(20) PRIMARY KEY,
+  name VARCHAR(20) NOT NULL,
+  email VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE doctors (
+  id VARCHAR(20) PRIMARY KEY,
+  name VARCHAR(20) NOT NULL,
+  email VARCHAR(20) NOT NULL,
+  password VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE admin (
+username VARCHAR(20) PRIMARY KEY,
+password VARCHAR(20) NOT NULL UNIQUE
+);
+
+CREATE TABLE vitals (
+id INT AUTO_INCREMENT PRIMARY KEY,
+patientId VARCHAR(20),
+heartRate INT,
+oxygenLevel INT,
+bloodPressure VARCHAR(50),
+temperature DOUBLE,
+FOREIGN KEY (patientID) REFERENCES patients(id)
+);
+
+CREATE TABLE appointments (
+id INT AUTO_INCREMENT PRIMARY KEY,
+appointmentDate DATE,
+doctorName VARCHAR(20),
+patientID VARCHAR(20),
+status VARCHAR(20),
+FOREIGN KEY (patientID) REFERENCES patients(id)
+)
+
+CREATE TABLE consultations (
+id INT AUTO_INCREMENT PRIMARY KEY,
+patientID VARCHAR(20),
+doctorName VARCHAR(20),
+diagnosis TEXT,
+treatment TEXT,
+FOREIGN KEY (patientID) REFERENCES patients(id)
+)
+
+CREATE TABLE prescriptions (
+id INT AUTO_INCREMENT PRIMARY KEY,
+patientID VARCHAR(20),
+medication VARCHAR(20),
+dosage VARCHAR(20),
+schedule VARCHAR(20),
+prescriber VARCHAR(20),
+FOREIGN KEY (patientID) REFERENCES patients(id)
+)
